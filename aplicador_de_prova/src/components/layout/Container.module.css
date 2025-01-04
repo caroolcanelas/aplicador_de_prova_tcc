@@ -1,0 +1,22 @@
+.Container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  flex-wrap: wrap;
+  background-color: #eeede8;
+  min-height: 100vh;
+}
+
+.minHeight {
+  min-height: 100%;
+}
+
+.start {
+  justify-content: flex-start;
+}
+
+.column {
+  flex-direction: column;
+  justify-content: flex-start;
+}
