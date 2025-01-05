@@ -1,14 +1,14 @@
+/* container  de todo o login*/
 .login_container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   width: 100%;
-  background-color: #eeede8;
   padding: 1rem;
   position: relative;
 }
 
+/* lado esquerdo (nome do sistema) e direito(inputs e mensagem) */
 .left_section,
 .right_section {
   display: flex;
@@ -18,11 +18,13 @@
   padding: 1rem;
 }
 
+/* input e mensagem */
 .right_section {
   flex-direction: column;
   gap: 2rem;
 }
 
+/* mensagem de login do lado esquerdo e nome do sistema (tem a mesma inclinação) */
 .login_message,
 .sistema_nome {
   padding: 1rem 2rem;
@@ -31,15 +33,28 @@
   transform: rotate(-5deg);
   color: #563a13;
   text-align: center;
-  max-width: 300px;
+  max-width: 400px;
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* ícone do lápis */
+.icon {
+  display: inline-flex;
+  font-size: 1.5em;
+  margin-left: 0.5rem;
+}
+
+/* mensagem de login do lado direito */
 .login_message {
   font-family: "Lora", serif;
   background-color: #b39582;
   font-weight: 300;
 }
 
+/* nome do sistema */
 .sistema_nome {
   font-style: italic;
   font-family: "Dancing Script", cursive;
@@ -48,6 +63,7 @@
   background-color: #f9f9f9;
 }
 
+/* inputs de login */
 .login_inputs {
   display: flex;
   flex-direction: column;

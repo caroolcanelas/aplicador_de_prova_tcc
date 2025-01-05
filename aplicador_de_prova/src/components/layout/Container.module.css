@@ -1,13 +1,16 @@
+/* container da página inteira */
 .Container {
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin: 0;
   flex-wrap: wrap;
-  background-color: #eeede8;
   min-height: 100vh;
+  height: 100vh;
+  background-color: #eeede8;
 }
 
+/* container principal */
 .minHeight {
   min-height: 100%;
 }

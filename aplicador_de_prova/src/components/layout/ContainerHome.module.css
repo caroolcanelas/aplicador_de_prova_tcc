@@ -1,0 +1,27 @@
+/* informação do usuário e filtros */
+.user_info,
+.filters {
+  background-color: #b69884;
+  border-radius: 18px;
+  margin: 10px 20px 40px;
+  padding: 0.5em;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* apenas informação de usuario */
+.user_info {
+  height: 25em;
+  width: 15em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* apenas filtro */
+.filters {
+  height: 25em;
+  width: 15em;
+  display: flex;
+  text-align: center;
+}

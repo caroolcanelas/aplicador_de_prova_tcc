@@ -1,0 +1,40 @@
+/* imagem de perfil */
+.profile_img {
+  font-size: 5.5em;
+}
+
+/* h4 de infos do perfil */
+.profile_info h4 {
+  color: #563a13;
+  font-weight: 700;
+  font-family: "Open Sans", serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* justificar texto das infos do perfil */
+.profile_info {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  justify-content: center;
+}
+
+/* p de infos do perfil */
+.profile_info p {
+  color: #563a13;
+  font-family: "Open Sans", serif;
+  margin-top: 0;
+}
+
+/* filtros de acessibilidade */
+.filter_column {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter_column h4 {
+  color: #563a13;
+  font-weight: 700;
+  font-family: "Open Sans", serif;
+}
