@@ -1,12 +1,15 @@
 /* informação do usuário e filtros */
 .user_info,
-.filters {
+.filters,
+.textScreen {
   background-color: #b69884;
   border-radius: 18px;
   margin: 10px 20px 40px;
   padding: 0.5em;
   justify-content: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Adapta largura ao contêiner pai */
+  height: auto;
 }
 
 /* apenas informação de usuario */
@@ -24,4 +27,43 @@
   width: 15em;
   display: flex;
   text-align: center;
+  margin-bottom: 0px;
+}
+
+.textScreen {
+  width: 100%;
+  max-width: 30em;
+  height: auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Tablet: Tela entre 768px e 1024px */
+@media (max-width: 1024px) {
+  .textScreen {
+    width: 90%; /* Ajusta largura para ocupar mais espaço */
+    height: 40em; /* Reduz altura */
+  }
+
+  .user_info,
+  .filters {
+    width: 90%; /* Ajusta largura */
+    height: auto; /* Altura ajustável conforme o conteúdo */
+  }
+}
+
+/* Mobile: Tela abaixo de 768px */
+@media (max-width: 768px) {
+  .textScreen {
+    width: 100%; /* Ocupa 100% da largura */
+    height: auto; /* Ajusta altura automaticamente */
+    padding: 10px; /* Reduz padding */
+  }
+
+  .user_info,
+  .filters {
+    width: 100%; /* Ocupa 100% da largura */
+    height: auto; /* Altura ajustável conforme o conteúdo */
+    padding: 10px; /* Reduz padding */
+  }
 }

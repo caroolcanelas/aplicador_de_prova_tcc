@@ -1,8 +1,9 @@
+import React from "react";
 import styles from "./ContainerHome.module.css";
 
 function ContainerHome(props) {
   return (
-    <div className={`${styles.Container} ${styles[props.customClass]} || ""`}>
+    <div className={`${styles.Container} ${styles[props.customClass] || ""}`}>
       {props.children}
     </div>
   );
