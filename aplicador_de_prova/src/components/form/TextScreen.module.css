@@ -1,0 +1,10 @@
+.text {
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 68em;
+  max-width: 70em;
+  height: 50em;
+  margin: 2.5em;
+  margin-top: 0em;
+}

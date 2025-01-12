@@ -1,7 +1,8 @@
-/* informação do usuário e filtros */
+/* informação do usuário, filtros, janela com texto e janela para digitar */
 .user_info,
 .filters,
-.textScreen {
+.textScreen,
+.placeholderContainer {
   background-color: #b69884;
   border-radius: 18px;
   margin: 10px 20px 40px;
@@ -30,12 +31,23 @@
   margin-bottom: 0px;
 }
 
+/* apenas janela de texto */
 .textScreen {
-  width: 100%;
-  max-width: 30em;
-  height: auto;
-  text-align: center;
+  width: 74em;
+  max-width: 90em;
+  height: 56em;
+  text-align: justify;
   box-sizing: border-box;
+  margin-bottom: 0px;
+}
+
+/* apenas janela para digitar */
+.placeholderContainer {
+  margin-bottom: 0px;
+  height: 56em;
+  box-sizing: border-box;
+  width: 20em;
+  max-width: 40em;
 }
 
 /* Tablet: Tela entre 768px e 1024px */

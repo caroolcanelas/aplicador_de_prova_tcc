@@ -5,6 +5,8 @@ import ContainerHome from "../layout/ContainerHome";
 import ButtonFilter from "../form/ButtonFilter";
 import TextScreen from "../form/TextScreen";
 import TextPlaceholder from "../form/TextPlaceholder";
+import ButtonDash from "../form/ButtonDash";
+import Modal from "../layout/Modal";
 
 // estilo
 import styles from "../pages/Home.module.css";
@@ -15,11 +17,17 @@ import { IoIosColorPalette } from "react-icons/io";
 import { IoSunnyOutline } from "react-icons/io5";
 import { FaRegEye } from "react-icons/fa";
 import { GiBrain } from "react-icons/gi";
+import { FaPlus } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
+import { IoIosSave } from "react-icons/io";
 
 function Home() {
   const [inputText, setInputText] = useState(""); // Texto atual digitado
   const [replicatedText, setReplicatedText] = useState(""); // Texto mostrado no TextScreen
   const [typingTimeout, setTypingTimeout] = useState(null); // Timeout para debounce
+
+  // Estados do modal
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleInputChange = (e) => {
     const value = e.target.value;
@@ -87,16 +95,38 @@ function Home() {
       </div>
       <div className={styles.rightSection}>
         <ContainerHome customClass="textScreen">
-          <TextScreen replicatedText={replicatedText} />
+          <div className={styles.replicatedText}>
+            <h4>Preview da Prova</h4>
+            <TextScreen replicatedText={replicatedText} />
+          </div>
         </ContainerHome>
         <ContainerHome customClass="placeholderContainer">
-          <textarea
-            placeholder="Digite algo aqui..."
-            value={inputText}
-            onChange={handleInputChange}
-          ></textarea>
+          <div className={styles.dashboard}>
+            <h4>Dashboard da Prova</h4>
+            <TextPlaceholder
+              placeholder="Digite algo aqui..."
+              value={inputText}
+              onChange={handleInputChange}
+            ></TextPlaceholder>
+          </div>
+          <div className={styles.botoesDash}>
+            <ButtonDash to="#" text="Nova Prova" icon={<FaPlus />}></ButtonDash>
+            <ButtonDash
+              to="#"
+              text="Banco de Questões"
+              icon={<FaSearch />}
+              onClick={() => setIsModalOpen(true)}
+            ></ButtonDash>
+            <ButtonDash to="#" text="Salvar" icon={<IoIosSave />}></ButtonDash>
+          </div>
         </ContainerHome>
       </div>
+
+      {/* Modal */}
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <h3>Banco de Questões</h3>
+        <p>Este é o conteúdo do modal.</p>
+      </Modal>
     </div>
   );
 }

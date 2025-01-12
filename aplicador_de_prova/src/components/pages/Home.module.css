@@ -33,12 +33,32 @@
   flex-direction: column;
 }
 
-.filter_column h4 {
+/* título dos filtors e do dash*/
+.filter_column,
+.dashboard h4 {
   color: #563a13;
   font-weight: 700;
   font-family: "Open Sans", serif;
 }
 
+/* apenas título do dash*/
+.dashboard h4 {
+  display: flex;
+  justify-content: center;
+  margin: 0.5em;
+}
+
+/* apenas título do preview */
+.replicatedText h4 {
+  justify-content: center;
+  display: flex;
+  margin: 0.5em;
+  color: #563a13;
+  font-weight: 700;
+  font-family: "Open Sans", serif;
+}
+
+/* contáiner geral da página*/
 .container {
   display: flex;
   flex-direction: row;
@@ -49,6 +69,7 @@
   box-sizing: border-box; /* Inclui padding e border no cálculo de largura */
 }
 
+/* parte da direita (preview e dash) */
 .rightSection {
   display: flex;
   flex-direction: row;
@@ -56,16 +77,25 @@
   flex-grow: 1;
 }
 
+/* preview e dash */
 .textScreen,
 .placeholderContainer {
   flex: 1;
   height: auto;
 }
 
+/* parte da esquerda (dados de usuário e filtros) */
 .leftSection {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.botoesDash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5em;
 }
 
 /* Tablet: Tela entre 768px e 1024px */

@@ -1,35 +1,12 @@
-import React, { useState } from "react";
+import styles from "./TextPlaceholder.module.css";
 
-function TextPlaceholder() {
-  const [inputText, setInputText] = useState("");
-
+function TextPlaceholder({ placeholder, value, onChange }) {
   return (
-    <div
-      style={{
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-        backgroundColor: "#f2f2f2",
-        borderRadius: "8px",
-        padding: "10px",
-        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.2)",
-      }}
-    >
+    <div className={styles.textArea}>
       <textarea
-        placeholder="Digite algo aqui..."
-        value={inputText}
-        onChange={(e) => setInputText(e.target.value)}
-        style={{
-          width: "90%",
-          height: "80%",
-          padding: "10px",
-          borderRadius: "8px",
-          border: "1px solid #ccc",
-          resize: "none",
-        }}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
       ></textarea>
     </div>
   );
