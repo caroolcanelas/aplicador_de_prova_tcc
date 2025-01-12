@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import styles from "./TextScreen.module.css";
 
 function TextScreen({ replicatedText }) {

@@ -1,25 +1,70 @@
-/* container da página inteira */
+/* Container da página inteira */
 .Container {
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin: 0;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Permite que os itens quebrem linha */
   min-height: 100vh;
   height: 100vh;
   background-color: #eeede8;
+  box-sizing: border-box; /* Inclui padding e borda na largura total */
 }
 
-/* container principal */
+/* Container principal */
 .minHeight {
   min-height: 100%;
 }
 
+/* Justificar início */
 .start {
   justify-content: flex-start;
 }
 
+/* Organização em coluna */
 .column {
   flex-direction: column;
   justify-content: flex-start;
+}
+
+/* Responsividade */
+
+/* Tablet: Tela entre 768px e 1024px */
+@media (max-width: 1024px) {
+  .Container {
+    flex-direction: column; /* Reorganiza os itens em coluna */
+    align-items: center; /* Centraliza os elementos */
+    height: auto; /* Ajusta altura automaticamente */
+    padding: 20px; /* Adiciona espaçamento interno */
+  }
+
+  .start {
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+  }
+
+  .column {
+    flex-direction: column; /* Mantém a direção em coluna */
+    align-items: center; /* Centraliza os itens */
+  }
+}
+
+/* Mobile: Tela abaixo de 768px */
+@media (max-width: 768px) {
+  .Container {
+    flex-direction: column; /* Organização vertical */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    padding: 10px; /* Reduz o padding */
+    height: auto; /* Altura flexível */
+  }
+
+  .start {
+    justify-content: center; /* Centraliza horizontalmente */
+  }
+
+  .column {
+    flex-direction: column; /* Organização vertical */
+    align-items: center; /* Centraliza os itens */
+    padding: 10px; /* Ajusta espaçamento interno */
+  }
 }

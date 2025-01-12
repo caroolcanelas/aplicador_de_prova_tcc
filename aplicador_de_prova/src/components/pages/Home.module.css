@@ -3,6 +3,12 @@
   font-size: 5.5em;
 }
 
+@media (max-width: 768px) {
+  .profile_img {
+    font-size: 3em; /* Diminui a imagem no mobile */
+  }
+}
+
 /* h4 de infos do perfil */
 .profile_info h4 {
   color: #563a13;
@@ -25,6 +31,16 @@
   color: #563a13;
   font-family: "Open Sans", serif;
   margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .profile_info h4 {
+    font-size: 14px; /* Reduz tamanho dos títulos */
+  }
+
+  .profile_info p {
+    font-size: 12px; /* Reduz tamanho do texto */
+  }
 }
 
 /* filtros de acessibilidade */
@@ -69,6 +85,20 @@
   box-sizing: border-box; /* Inclui padding e border no cálculo de largura */
 }
 
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
 /* parte da direita (preview e dash) */
 .rightSection {
   display: flex;
@@ -98,11 +128,43 @@
   margin-top: 5em;
 }
 
+.filter_column {
+  gap: 10px; /* Espaçamento entre filtros */
+}
+
+.botoesDash {
+  gap: 10px;
+  margin-top: 2em;
+}
+
+@media (max-width: 768px) {
+  .filter_column,
+  .botoesDash {
+    gap: 5px; /* Reduz espaço entre botões */
+  }
+}
+
+.rightSection,
+.leftSection {
+  width: 100%; /* Ocupam largura total em telas pequenas */
+}
+
+@media (max-width: 768px) {
+  .rightSection {
+    display: flex;
+    flex-direction: column; /* Dash e preview em coluna */
+  }
+}
+
 /* Tablet: Tela entre 768px e 1024px */
 @media (max-width: 1024px) {
   .container {
     flex-direction: column; /* Organiza os itens em coluna */
     align-items: center; /* Centraliza os itens */
+  }
+  .rightSection {
+    display: flex;
+    flex-direction: column; /* Dash e preview em coluna */
   }
 }
 
@@ -112,4 +174,16 @@
     flex-direction: column; /* Organiza os itens em coluna */
     gap: 10px; /* Reduz espaçamento */
   }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+.container {
+  max-width: 100vw;
+  box-sizing: border-box;
+  padding: 10px;
 }

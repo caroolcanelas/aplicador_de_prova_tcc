@@ -11,6 +11,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   width: 100%; /* Adapta largura ao contêiner pai */
   height: auto;
+  box-sizing: border-box; /* Inclui padding e bordas na largura */
 }
 
 /* apenas informação de usuario */
@@ -29,6 +30,7 @@
   display: flex;
   text-align: center;
   margin-bottom: 0px;
+  flex-direction: column; /* Organização vertical */
 }
 
 /* apenas janela de texto */
@@ -47,7 +49,23 @@
   height: 56em;
   box-sizing: border-box;
   width: 20em;
-  max-width: 40em;
+  max-width: 100%; /* Ocupa no máximo 90% da largura do contêiner pai */
+}
+
+/* Tablet: Tela entre 768px e 1024px */
+@media (max-width: 1024px) {
+  .textScreen {
+    width: 90%; /* Ajusta largura para ocupar mais espaço */
+    height: auto; /* Reduz altura */
+    padding: 1rem; /* Adiciona espaçamento */
+  }
+
+  .user_info,
+  .filters {
+    width: 90%; /* Ajusta largura */
+    height: auto; /* Altura ajustável conforme o conteúdo */
+    margin: 0 auto;
+  }
 }
 
 /* Tablet: Tela entre 768px e 1024px */
@@ -55,12 +73,24 @@
   .textScreen {
     width: 90%; /* Ajusta largura para ocupar mais espaço */
     height: 40em; /* Reduz altura */
+    padding: 1em; /* Adiciona espaçamento */
   }
 
   .user_info,
   .filters {
-    width: 90%; /* Ajusta largura */
+    width: 45%; /* Divide espaço entre dois containers */
     height: auto; /* Altura ajustável conforme o conteúdo */
+    margin: 0 auto; /* Centraliza os elementos */
+  }
+
+  .filters {
+    align-items: center;
+  }
+
+  .placeholderContainer {
+    width: 90%; /* Reduz largura */
+    height: auto; /* Altura ajustável */
+    padding: 1em;
   }
 }
 
@@ -69,7 +99,7 @@
   .textScreen {
     width: 100%; /* Ocupa 100% da largura */
     height: auto; /* Ajusta altura automaticamente */
-    padding: 10px; /* Reduz padding */
+    padding: 0.8rem; /* Reduz padding */
   }
 
   .user_info,
@@ -77,5 +107,15 @@
     width: 100%; /* Ocupa 100% da largura */
     height: auto; /* Altura ajustável conforme o conteúdo */
     padding: 10px; /* Reduz padding */
+  }
+
+  .filters {
+    align-items: center;
+  }
+
+  .placeholderContainer {
+    width: 100%; /* Ocupa toda a largura */
+    height: auto; /* Ajusta altura automaticamente */
+    padding: 10px;
   }
 }

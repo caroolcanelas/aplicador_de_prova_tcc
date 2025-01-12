@@ -1,16 +1,19 @@
 /* container  de todo o login*/
 .login_container {
   display: flex;
+  flex-direction: row; /* Exibe seções lado a lado */
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 1rem;
   position: relative;
+  box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
 }
 
 /* lado esquerdo (nome do sistema) e direito(inputs e mensagem) */
 .left_section,
 .right_section {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,4 +79,39 @@
   background-color: #e6dad5;
   transform: rotate(5deg);
   color: #87725c;
+  max-width: 300px;
+}
+
+/* Tablet: Tela entre 768px e 1024px */
+@media (max-width: 1024px) {
+  .login_container {
+    flex-direction: column; /* Organiza as seções em coluna */
+    height: auto; /* Permite altura dinâmica */
+    padding: 20px;
+  }
+
+  .left_section {
+    margin-right: 0;
+    margin-bottom: 20px; /* Espaço entre as seções */
+    width: 100%; /* Ocupa 100% da largura */
+  }
+
+  .right_section {
+    width: 100%; /* Ocupa 100% da largura */
+  }
+}
+
+/* Mobile: Tela abaixo de 768px */
+@media (max-width: 768px) {
+  .sistema_nome h2 {
+    font-size: 1.5rem; /* Reduz o tamanho do texto */
+  }
+
+  .login_message h2 {
+    font-size: 1.2rem; /* Ajusta o tamanho do texto */
+  }
+
+  .login_inputs {
+    max-width: 100%; /* Inputs ocupam toda a largura */
+  }
 }
