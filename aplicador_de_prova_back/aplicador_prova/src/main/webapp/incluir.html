@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Incluir</title>
+</head>
+<script>
+async function incluirDepartamento() {
+	// Criando o objeto JSON a ser processado pelo WebService
+	let depto = {
+		"id" : "4",
+		"sigla" : "LG",
+		"nome" : "Logística"
+  	};	  
+	// Definindo o objeto que descreve a requisição HTTP
+	let conf = { 
+					method: 'POST',		  
+		  			headers: {
+		      			'Accept': 'application/json',
+		      			'Content-Type': 'application/json'
+		    		},             
+             		mode: 'cors',
+             		body: JSON.stringify(depto),
+             		cache: 'default' 
+             	};
+
+	
+  	try {
+  		let endereco = "http://127.0.0.1:8080/prjStateless/ws/ctrlDepartamento/incluirDepartamento";
+  		// Enviando a requisição para o WebService
+  		let resultado = await fetch(endereco, conf);
+  		// Mostrando a resposta recebida
+  		console.log("resultado = " + resultado);
+    	let objetoJson = await resultado.json();
+    	console.log("Departamento = ", JSON.stringify(objetoJson));
+  	}
+  	catch(e) {
+    	console.log("Erro na requisição: " + e);
+  	}
+}
+
+// Solicitando a execução da função acima
+incluirDepartamento();
+</script>
+<body>
+</body>
+</html>
