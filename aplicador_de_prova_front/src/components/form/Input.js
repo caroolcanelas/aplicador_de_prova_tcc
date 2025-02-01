@@ -1,9 +1,17 @@
 import styles from "./Input.module.css";
 
-function Input({ type, text, name, placeholder, handleOnChange, value }) {
+function Input({
+  type,
+  text,
+  name,
+  placeholder,
+  handleOnChange,
+  value,
+  className,
+}) {
   return (
     <div className={styles.form_control}>
-      <label htmlFor={name}>{text}:</label>
+      <label htmlFor={name}>{text}</label>
       <input
         type={type}
         name={name}
@@ -11,6 +19,7 @@ function Input({ type, text, name, placeholder, handleOnChange, value }) {
         placeholder={placeholder}
         onChange={handleOnChange}
         value={value}
+        className={className}
       />
     </div>
   );

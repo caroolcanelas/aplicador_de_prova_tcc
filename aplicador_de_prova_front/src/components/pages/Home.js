@@ -123,10 +123,7 @@ function Home() {
       </div>
 
       {/* Modal */}
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <h3>Banco de Questões</h3>
-        <p>Este é o conteúdo do modal.</p>
-      </Modal>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}></Modal>
     </div>
   );
 }

@@ -12,11 +12,11 @@
 }
 
 .modalContent {
-  background: white;
+  background: #b69885;
   padding: 20px;
   border-radius: 8px;
-  width: 80%;
-  max-width: 500px;
+  width: 90%;
+  max-width: 700px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
 }
@@ -29,4 +29,27 @@
   border: none;
   font-size: 20px;
   cursor: pointer;
+}
+
+/* apenas título do modal*/
+.modalHeader h3 {
+  display: flex;
+  justify-content: center;
+  margin: 0.5em;
+  color: #563a13;
+  font-weight: 700;
+  font-family: "Open Sans", serif;
+}
+
+/* parte de pesquisa do modal */
+
+.modalPesquisa {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espaço entre os elementos */
+  width: 100%; /* Garante que ocupe toda a largura disponível */
+}
+
+.barraPesquisa {
+  width: 50%;
 }
