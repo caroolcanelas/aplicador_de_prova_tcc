@@ -5,6 +5,8 @@ import styles from "./Modal.module.css";
 
 //ícones
 import { FaSearch } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
+import { IoIosSave } from "react-icons/io";
 
 //Componentes
 import Input from "../form/Input";
@@ -27,7 +29,7 @@ function Modal({ isOpen, onClose, children }) {
             type="text"
             name="busca"
             placeholder="Pesquisar"
-            className={styles.barraPesquisa}
+            customClass="barraPesquisa"
           ></Input>
           <ButtonDash
             customClass="pesquisa"
@@ -35,7 +37,17 @@ function Modal({ isOpen, onClose, children }) {
             icon={<FaSearch />}
           ></ButtonDash>
         </div>
-        <p>Este é o conteúdo do modal.</p>
+        <div className={styles.retornoPesquisa}>
+          <p>Este é o conteúdo do modal.</p>
+        </div>
+        <div className={styles.botoesModal}>
+          <ButtonDash to="#" text="Nova Questão" icon={<FaPlus />}></ButtonDash>
+          <ButtonDash
+            to="#"
+            text="Selecionar"
+            icon={<IoIosSave />}
+          ></ButtonDash>
+        </div>
         {children}
       </div>
     </div>

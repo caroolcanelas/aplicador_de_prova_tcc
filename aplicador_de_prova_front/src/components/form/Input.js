@@ -7,10 +7,10 @@ function Input({
   placeholder,
   handleOnChange,
   value,
-  className,
+  customClass,
 }) {
   return (
-    <div className={styles.form_control}>
+    <div className={`${styles.btn} ${customClass ? styles[customClass] : ""}`}>
       <label htmlFor={name}>{text}</label>
       <input
         type={type}
@@ -19,7 +19,6 @@ function Input({
         placeholder={placeholder}
         onChange={handleOnChange}
         value={value}
-        className={className}
       />
     </div>
   );

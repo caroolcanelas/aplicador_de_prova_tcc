@@ -4,7 +4,8 @@
   margin-bottom: 1em;
 }
 
-.form_control label {
+.form_control,
+.barraPesquisa label {
   margin-bottom: 0.6em;
   font-weight: bold;
 }
@@ -16,5 +17,22 @@
 }
 
 .form_control input::placeholder {
+  color: #7b7b7b;
+}
+
+.barraPesquisa {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.barraPesquisa input {
+  padding: 0.7em;
+  border-radius: 5em;
+  border: none;
+}
+
+.barraPesquisa input::placeholder {
   color: #7b7b7b;
 }
